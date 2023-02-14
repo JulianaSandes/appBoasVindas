@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-label position="floating">Digite o primeiro número</ion-label>
+    <ion-input [(ngModel)]="n1"></ion-input>
+  </ion-item>
+
+
+<ion-item>
+  <ion-label position="floating">Digite o segundo número</ion-label>
+  <ion-input [(ngModel)]="n2"></ion-input>
+</ion-item>
+
+<ion-button expand="block" (click)= "somar()">Somar</ion-button>
+
+<ion-label>{{res}}</ion-label>
+
+</ion-content>
