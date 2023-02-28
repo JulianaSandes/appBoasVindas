@@ -7,19 +7,22 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-item>
-    <ion-label position="floating">Digite o primeiro número</ion-label>
-    <ion-input [(ngModel)]="n1"></ion-input>
-  </ion-item>
-
-
-<ion-item>
-  <ion-label position="floating">Digite o segundo número</ion-label>
-  <ion-input [(ngModel)]="n2"></ion-input>
-</ion-item>
-
-<ion-button expand="block" (click)= "somar()">Somar</ion-button>
-
-<ion-label>{{res}}</ion-label>
-
+  <ion-list>
+      <ion-radio-group [(ngModel)]="radioSelecionada">
+        <ion-list-header> Escolha uma opção: </ion-list-header>
+        <ion-item>
+          <ion-label>Opção 1</ion-label>
+          <ion-radio value="option1"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Opção 2</ion-label>
+          <ion-radio value="option2"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Opção 3</ion-label>
+          <ion-radio value="option3"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+    <ion-button (click)="verificarRadio()">Verificar seleção</ion-button>
 </ion-content>
